@@ -45,7 +45,7 @@ public class AquariumServiceImpl implements AquariumService {
         Fish kind = new Fish(Gender.randomGender(), RANDOM.nextInt(1000, 5000), generateLocation());
         aquarium.getFishes().add(kind);
         executorService.execute(new RunnableFish(aquarium, kind));
-        return ("Fish reproduced! => " + kind);
+        return ("Fish born -> " + kind);
     }
 
     @Override

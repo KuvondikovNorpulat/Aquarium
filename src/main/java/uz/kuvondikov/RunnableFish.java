@@ -17,7 +17,7 @@ public class RunnableFish implements Runnable {
         try {
             Thread.sleep(fish.getLifeTime());
             aquarium.getFishes().remove(fish);
-            System.out.println("Fish o'ldi! =>" + fish);
+            System.out.println("Fish died ->" + fish);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
