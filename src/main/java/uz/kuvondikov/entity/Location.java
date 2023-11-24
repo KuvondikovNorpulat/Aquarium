@@ -3,8 +3,6 @@ package uz.kuvondikov.entity;
 import lombok.Getter;
 import lombok.ToString;
 
-import java.util.Objects;
-
 @Getter
 @ToString
 public class Location {
@@ -27,11 +25,6 @@ public class Location {
 
         Location location = (Location) obj;
         return x == location.x && y == location.y;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(x, y);
     }
 
     public void setX(int x) {

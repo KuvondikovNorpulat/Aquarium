@@ -6,7 +6,7 @@ import uz.kuvondikov.enums.Gender;
 public interface AquariumService {
     Fish createNewFish(Gender gender);
 
-    String reproduce(Fish fish1, Fish fish2);
+    String procreation();
 
     boolean hasCollidedBefore(Fish fish1, Fish fish2);
 
@@ -14,5 +14,5 @@ public interface AquariumService {
 
     void clearCollisions();
 
-    void moveFish();
+    void move();
 }
