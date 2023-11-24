@@ -32,6 +32,10 @@ public class AquariumServiceImpl implements AquariumService {
 
     @Override
     public synchronized Fish createNewFish(Gender gender) {
+
+        if (aquarium.getFishes().size() >= aquarium.getCapacity())
+            throw new AquariumOverFlowException();
+
         Fish newFish = new Fish(gender, RANDOM.nextInt(1000, 5000), generateLocation());
         aquarium.getFishes().add(newFish);
         return newFish;
